@@ -8,5 +8,4 @@ const Home = () => (
     <Users />
   </Fragment>
 );
-
 export default Home;

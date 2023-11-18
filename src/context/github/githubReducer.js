@@ -3,41 +3,41 @@ import {
   SET_LOADING,
   CLEAR_USERS,
   GET_USER,
-  GET_REPOS
+  GET_REPOS,
 } from '../types';
-
 export default (state, action) => {
   switch (action.type) {
     case SEARCH_USERS:
       return {
         ...state,
-        users: action.payload,
-        loading: false
+        users: action.paylaod,
+        loading: false,
       };
     case GET_USER:
       return {
-        ...state,
-        user: action.payload,
-        loading: false
+        user: action.paylaod,
+        loading: false,
       };
     case CLEAR_USERS:
       return {
         ...state,
         users: [],
-        loading: false
+        loading: false,
       };
     case GET_REPOS: {
       return {
         ...state,
-        repos: action.payload,
-        loading: false
+        repos: action.paylaod,
+        loading: false,
       };
     }
     case SET_LOADING:
       return {
+        //make a copy of the state
         ...state,
-        loading: true
+        loading: true,
       };
+
     default:
       return state;
   }
