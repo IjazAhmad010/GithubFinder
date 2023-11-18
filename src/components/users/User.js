@@ -34,7 +34,7 @@ const User = ({ match }) => {
   if (loading) return <Spinner />;
   return (
     <Fragment>
-      <Link to='./' className='btn btn-light'>
+      <Link to='/' className='btn btn-light'>
         Back to Search
       </Link>
       Hireable: {''}
@@ -96,7 +96,7 @@ const User = ({ match }) => {
         <div className='badge badge-light'>Public Repos: {public_repos}</div>
         <div className='badge badge-dark'>Public Gists: {public_gists}</div>
       </div>
-      {repos.length && <Repos repos={repos} />}
+      {repos?.length && <Repos repos={repos} />}
     </Fragment>
   );
 };
